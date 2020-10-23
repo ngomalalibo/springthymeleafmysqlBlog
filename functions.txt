@@ -1,0 +1,8 @@
+categories - getAll (orderby date and id), addCategory, updateCategory, deleteCategory
+
+admins - getAll, getAdminByUsername&Password, getAdminById, adAdmin, updateAdmin, deleteAdmin
+
+posts - getAll, getAllByCategory, getPage, getPost, searchPosts, addPost, updatePost, deletePost
+
+comments - getApprovedComments, getUnapprovedCommentsByPost,GetAllComments, getAllUnapprovedComments, getAll, getApprovedCommentById, getUnapprovedCommentById, addComment, updateComments, deleteComment
+
