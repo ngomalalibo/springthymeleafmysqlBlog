@@ -1,0 +1,33 @@
+.col-sm-10 {
+    background-color: floralwhite;
+}
+
+.col-sm-2 {
+    background-color: #1f3c52;
+}
+
+
+#Side_Menu a {
+    color: white;
+}
+
+#Side_Menu .active a {
+    color: #ffff00;
+}
+
+#Side_Menu a:hover {
+    color: #00ff00;
+}
+
+#footer {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    border-top: 3px solid blue;
+
+}
+
+h5 {
+    font-family: raleway;
+    color: green;
+}
