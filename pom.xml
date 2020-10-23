@@ -118,35 +118,30 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <!--<configuration>
+                    <mainClass>com.ngomalalibo.stocktradingapp.ConfigServerApplication</mainClass>
+                    <wait>500</wait>
+                    <maxAttempts>240</maxAttempts>
+                </configuration>-->
             </plugin>
 
-            <plugin>
-                <groupId>com.heroku.sdk</groupId>
-                <artifactId>heroku-maven-plugin</artifactId>
-                <version>3.0.1</version>
-                <configuration>
-                    <appName>spring-thymeleaf-mysql-blog</appName>
-                    <buildpacks>
-                        <buildpack>heroku/java</buildpack>
-                    </buildpacks>
-                    <processTypes>
-                        <web>
-                            <!--java $JAVA_OPTS -jar target/dependency/webapp-runner.jar
-                            target/web-librarian-project-2.0-SNAPSHOT.war-->
-                            java $JAVA_OPTS -jar target/blog-0.0.1-SNAPSHOT.jar
-                        </web>
-                    </processTypes>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
+                <artifactId>maven-war-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>war</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
-                    <source>11</source>
-                    <target>11</target>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <warName>${project.artifactId}</warName>
+                    <outputDirectory>${project.build.directory}</outputDirectory>
                 </configuration>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
@@ -200,22 +195,12 @@
                     </execution>
                 </executions>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>war</goal>
-                        </goals>
-                    </execution>
-                </executions>
+                <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                    <warName>${project.artifactId}</warName>
-                    <outputDirectory>${project.build.directory}</outputDirectory>
+                    <source>11</source>
+                    <target>11</target>
                 </configuration>
             </plugin>
         </plugins>
