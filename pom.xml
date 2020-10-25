@@ -63,7 +63,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
+            <!--            <scope>runtime</scope>-->
             <optional>true</optional>
         </dependency>
         <dependency>
@@ -109,11 +109,6 @@
             <artifactId>spring-boot-starter-tomcat</artifactId>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>javax.xml.bind</groupId>
-            <artifactId>jaxb-api</artifactId>
-            <version>2.3.0</version>
-        </dependency>
 
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -122,7 +117,24 @@
             <scope>provided</scope>
             <!--            <scope>compile</scope>-->
         </dependency>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>8.0.1</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.spring.platform</groupId>
+                <artifactId>platform-bom</artifactId>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <finalName>${artifactId}</finalName>
@@ -130,11 +142,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <!--<configuration>
-                    <mainClass>com.ngomalalibo.stocktradingapp.ConfigServerApplication</mainClass>
-                    <wait>500</wait>
-                    <maxAttempts>240</maxAttempts>
-                </configuration>-->
             </plugin>
 
             <plugin>
