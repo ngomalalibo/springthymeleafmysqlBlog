@@ -132,7 +132,7 @@
     </dependencies>
 
     <build>
-        <defaultGoal>spring-boot:run</defaultGoal>
+        <!--        <defaultGoal>spring-boot:run</defaultGoal>-->
         <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
@@ -233,7 +233,7 @@
                     <source>11</source>
                     <target>11</target>
                     <compilerArguments>
-                        <endorseddirs>${project.build.directory}/endorsed</endorseddirs>
+                        <endorseddirs>${project.build.directory}</endorseddirs>
                     </compilerArguments>
                 </configuration>
             </plugin>
