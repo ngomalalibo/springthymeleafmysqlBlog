@@ -8,7 +8,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 @SpringBootApplication
 public class BlogApplication extends SpringBootServletInitializer
 {
-   
+    
     @Override
     protected SpringApplicationBuilder configure(
             SpringApplicationBuilder builder)
@@ -16,13 +16,8 @@ public class BlogApplication extends SpringBootServletInitializer
         return builder.sources(BlogApplication.class);
     }
     
-    
     public static void main(String[] args)
     {
-        
         SpringApplication.run(BlogApplication.class, args);
-        
     }
-    
-    
 }

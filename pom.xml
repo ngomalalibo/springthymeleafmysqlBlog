@@ -238,7 +238,7 @@
                 <artifactId>heroku-maven-plugin</artifactId>
                 <version>3.0.1</version>
                 <configuration>
-                    <appName>blognoenv</appName>
+                    <appName>spring-thymeleaf-mysql-blog</appName>
                     <buildpacks>
                         <buildpack>heroku/jvm</buildpack>
                     </buildpacks>
