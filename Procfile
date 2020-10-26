@@ -1,1 +1,1 @@
-web: java -jar target/webapp-runner.jar target/blog.war
+web: java $JAVA_OPTS -jar target/webapp-runner.jar --port $PORT target/blog.war
