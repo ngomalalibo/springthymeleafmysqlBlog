@@ -252,12 +252,10 @@
                 <configuration>
                     <appName>spring-thymeleaf-mysql-blog</appName>
                     <buildpacks>
-                        <buildpack>heroku/jvm</buildpack>
+                        <buildpack>heroku/java</buildpack>
                     </buildpacks>
                     <processTypes>
                         <web>
-                            <!--java $JAVA_OPTS -jar target/dependency/webapp-runner.jar
-                            target/web-librarian-project-2.0-SNAPSHOT.war-->
                             java $JAVA_OPTS -jar target/webapp-runner.jar --port $PORT
                             target/blog.war
                         </web>
