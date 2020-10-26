@@ -134,6 +134,11 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <!--<configuration>
+                    <mainClass>com.ngomalalibo.stocktradingapp.ConfigServerApplication</mainClass>
+                    <wait>500</wait>
+                    <maxAttempts>240</maxAttempts>
+                </configuration>-->
             </plugin>
 
             <plugin>
@@ -159,6 +164,7 @@
                 <version>3.1.2</version>
                 <executions>
                     <execution>
+                        <id>webapp-runner-copy-dev</id>
                         <phase>verify</phase>
                         <goals>
                             <goal>copy</goal>
@@ -213,23 +219,6 @@
                     <target>11</target>
                 </configuration>
             </plugin>
-            <!--<plugin>
-                <groupId>com.heroku.sdk</groupId>
-                <artifactId>heroku-maven-plugin</artifactId>
-                <version>3.0.1</version>
-                <configuration>
-                    <appName>spring-thymeleaf-mysql-blog</appName>
-                    <buildpacks>
-                        <buildpack>heroku/java</buildpack>
-                    </buildpacks>
-                    <processTypes>
-                        <web>
-                            java $JAVA_OPTS -jar target/webapp-runner.jar &#45;&#45;port $PORT
-                            target/*.war
-                        </web>
-                    </processTypes>
-                </configuration>
-            </plugin>-->
         </plugins>
     </build>
 
