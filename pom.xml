@@ -20,6 +20,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.test.skip>true</maven.test.skip>
+        <start-class>com.cms.blog.BlogApplication</start-class>
     </properties>
 
     <dependencies>
@@ -128,6 +129,7 @@
     </dependencies>
 
     <build>
+        <defaultGoal>spring-boot:run</defaultGoal>
         <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
@@ -213,7 +215,7 @@
                 </configuration>
             </plugin>
 
-            <!--<plugin>
+            <plugin>
                 <groupId>com.heroku.sdk</groupId>
                 <artifactId>heroku-maven-plugin</artifactId>
                 <version>3.0.1</version>
@@ -224,12 +226,12 @@
                     </buildpacks>
                     <processTypes>
                         <web>
-                            java $JAVA_OPTS -jar target/webapp-runner.jar &#45;&#45;port $PORT
-                            target/blog.war
+                            java $JAVA_OPTS -jar target/webapp-runner.jar --port $PORT
+                            target/*.war
                         </web>
                     </processTypes>
                 </configuration>
-            </plugin>-->
+            </plugin>
         </plugins>
     </build>
 
