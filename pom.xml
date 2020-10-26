@@ -129,7 +129,6 @@
     </dependencies>
 
     <build>
-        <defaultGoal>spring-boot:run</defaultGoal>
         <finalName>${project.artifactId}</finalName>
         <plugins>
             <plugin>
@@ -214,7 +213,6 @@
                     <target>11</target>
                 </configuration>
             </plugin>
-
             <plugin>
                 <groupId>com.heroku.sdk</groupId>
                 <artifactId>heroku-maven-plugin</artifactId>
