@@ -159,7 +159,7 @@
                 <version>3.1.2</version>
                 <executions>
                     <execution>
-                        <phase>install</phase>
+                        <phase>verify</phase>
                         <goals>
                             <goal>copy</goal>
                         </goals>
@@ -177,7 +177,7 @@
                     </execution>
                     <execution>
                         <id>copy-dependencies</id>
-                        <phase>install</phase>
+                        <phase>verify</phase>
                         <goals>
                             <goal>copy-dependencies</goal>
                         </goals>
@@ -213,7 +213,7 @@
                     <target>11</target>
                 </configuration>
             </plugin>
-            <plugin>
+            <!--<plugin>
                 <groupId>com.heroku.sdk</groupId>
                 <artifactId>heroku-maven-plugin</artifactId>
                 <version>3.0.1</version>
@@ -224,12 +224,12 @@
                     </buildpacks>
                     <processTypes>
                         <web>
-                            java $JAVA_OPTS -jar target/webapp-runner.jar --port $PORT
+                            java $JAVA_OPTS -jar target/webapp-runner.jar &#45;&#45;port $PORT
                             target/*.war
                         </web>
                     </processTypes>
                 </configuration>
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
 
