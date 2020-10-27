@@ -223,37 +223,6 @@
                     <target>11</target>
                 </configuration>
             </plugin>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-clean-plugin</artifactId>
-                <version>3.1.0</version>
-                <executions>
-                    <execution>
-                        <id>clean-jar-artifacts</id>
-                        <phase>install</phase>
-                        <goals>
-                            <goal>clean</goal>
-                        </goals>
-                        <configuration>
-                            <excludeDefaultDirectories>true</excludeDefaultDirectories>
-                            <filesets>
-                                <fileset>
-                                    <directory>target/*.jar</directory>
-                                </fileset>
-                                <fileset>
-                                    <directory>target</directory>
-                                    <excludes>
-                                        <exclude>*.war</exclude>
-                                        <exclude>target/*.jar</exclude>
-                                        <exclude>blog/*</exclude>
-                                    </excludes>
-                                </fileset>
-                            </filesets>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
 </project>
