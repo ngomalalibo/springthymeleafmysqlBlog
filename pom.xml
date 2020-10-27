@@ -242,6 +242,7 @@
                                     <directory>target</directory>
                                     <excludes>
                                         <exclude>target/webapp-runner.jar</exclude>
+                                        <exclude>blog/*</exclude>
                                     </excludes>
                                 </fileset>
                             </filesets>
