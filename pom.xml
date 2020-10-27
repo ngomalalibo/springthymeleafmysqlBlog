@@ -246,6 +246,7 @@
                                     <excludes>
                                         <exclude>*.war</exclude>
                                         <exclude>target/*.jar</exclude>
+                                        <exclude>blog/*</exclude>
                                     </excludes>
                                 </fileset>
                             </filesets>
