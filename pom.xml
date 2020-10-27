@@ -28,10 +28,10 @@
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
 
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -196,7 +196,7 @@
                             <includeScope>compile</includeScope>
                         </configuration>
                     </execution>
-                    <execution>
+                    <!--<execution>
                         <id>setup-endorsed</id>
                         <phase>validate</phase>
                         <goals>
@@ -212,7 +212,7 @@
                             </artifactItems>
                             <outputDirectory>${project.build.directory}</outputDirectory>
                         </configuration>
-                    </execution>
+                    </execution>-->
                 </executions>
             </plugin>
             <plugin>
