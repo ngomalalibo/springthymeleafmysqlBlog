@@ -131,6 +131,7 @@ public class AdminPostController
                         if (Files.deleteIfExists(filePath))
                         {
                             Files.copy(inputStream, filePath, StandardCopyOption.REPLACE_EXISTING);
+                            inputStream.close();
                         }
                         else
                         {
@@ -140,6 +141,7 @@ public class AdminPostController
                     else
                     {
                         Files.copy(inputStream, filePath, StandardCopyOption.REPLACE_EXISTING);
+                        inputStream.close();
                     }
                     
                     // String fileName = copyUploadedFileToDir(request, response);

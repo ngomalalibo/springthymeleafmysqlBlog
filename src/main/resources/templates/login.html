@@ -2,19 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <link rel="stylesheet" href="css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}">
-    <link rel="stylesheet" href="css/mdb.min.css" th:href="@{/css/mdb.min.css}">
-    <link rel="stylesheet" href="css/style.css" th:href="@{/css/style.css}">
-    <link href="fontawesome/css/all.min.css" rel="stylesheet" th:href="@{/fontawesome/css/all.min.css}">
-    <link href="fontawesome/css/fontawesome.css" rel="stylesheet" th:href="@{/fontawesome/css/fontawesome.css}">
-    <link href="fontawesome/css/brands.css" rel="stylesheet" th:href="@{/fontawesome/css/brands.css}">
-    <link href="fontawesome/css/solid.css" rel="stylesheet" th:href="@{/fontawesome/css/solid.css}">
-    <link rel="stylesheet" href="css/adminstyles.css" th:href="@{/css/adminstyles.css}">
-    <link rel="stylesheet" href="css/publicstyles.css" th:href="@{/css/publicstyles.css}">
+    <th:block th:insert="~{head::head}"></th:block>
     <title>Login</title>
 </head>
 <body style="background: url(images/drop.jpg) no-repeat center center fixed; background-size: cover; margin-top: -36px; height: 100%">

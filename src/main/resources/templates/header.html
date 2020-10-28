@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:insert="~{head::head}"></th:block>
+</head>
+<body>
+<div th:fragment="header">
+    <div style="height: 10px; background: rebeccapurple;"></div>
+    <nav class="navbar navbar-expand-lg navbar-default bg-light">
+        <a href="index.php" th:href="@{/index}" class="navbar-brand"> <img src="images/logos/academyLogo2.png"
+                                                                           th:src="@{/images/logos/academyLogo2.png}"
+                                                                           alt="Logo" width="250"
+                                                                           height="75"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active btn btn-dark btn-sm"><a class="nav-link" href="index.php"
+                                                                   th:href="@{/index}">Blog
+                    Home<span
+                            class="sr-only">(current)</span></a></li>
+            </ul>
+        </div>
+    </nav>
+    <div style="height: 10px; background: rebeccapurple;"></div>
+</div>
+
+</body>
+</html>
