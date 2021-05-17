@@ -1,7 +1,6 @@
 package com.cms.blog.service;
 
 import com.cms.blog.entity.Admin;
-import com.cms.blog.entity.Comment;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
